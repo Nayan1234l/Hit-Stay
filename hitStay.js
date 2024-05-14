@@ -50,7 +50,38 @@ const startGame = () => {
         document.getElementById("opponent-cards").append(imgCard)
     }
     console.log(opponentSum)
+
+
+
+    //give yourself card. initially you have two cards
+    for (let i = 0; i < 2; i++) {
+        let imgCard = document.createElement("img");
+        let card = deck.pop()
+        // imgCard.src=`./cards/ ${card} .png`
+        imgCard.src = "./cards/" + card + ".png"
+        yourSum += getValue(card)
+        yourTekkaCount += checkTekka(card)
+        document.getElementById("player-cards").append(imgCard)
+    }
+    console.log(yourSum)
+    document.getElementById('hit').addEventListener('click', hit)
 }
+
+
+const hit = () => {
+    if (!canHit) {
+        return
+    } else {
+        let imgCard = document.createElement("img");
+        let card = deck.pop()
+        // imgCard.src=`./cards/ ${card} .png`
+        imgCard.src = "./cards/" + card + ".png"
+        yourSum += getValue(card)
+        yourTekkaCount += checkTekka(card)
+        document.getElementById("player-cards").append(imgCard)
+    }
+}
+
 
 const getValue = (card) => {
     let data = card.split('-')
