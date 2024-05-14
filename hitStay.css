@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+#opponent-cards img {
+    height: 180px;
+    width: 125px;
+
+}
+
+#player-cards img {
+    height: 180px;
+    width: 125px;
+
+}
+
+#hit {
+    width: 90px;
+    height: 40px;
+    padding: auto;
+}
+
+#stay {
+    width: 90px;
+    height: 40px;
+    padding: auto;
+}
